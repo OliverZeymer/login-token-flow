@@ -20,8 +20,11 @@ export default function LoginForm() {
       })
       .then((response) => {
         if (response.status >= 200 && response.status <= 299) {
+          const milliseconds = response.data.validUntil - Date.now()
+          const validFor = milliseconds / (1000 * 60 * 60 * 24)
           setTokenCookie(JSON.stringify(response.data), {
-            reponse.data.validUntil 
+            days: validFor,
+            sameSite: "strict",
           })
           setToken(response.data)
           toast.success("Login successful!")

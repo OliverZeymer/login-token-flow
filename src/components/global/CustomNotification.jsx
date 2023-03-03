@@ -1,5 +1,5 @@
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function CustomNotification() {
   return (
@@ -10,7 +10,6 @@ export default function CustomNotification() {
         fontFamily: "Poppins, sans-serif",
         fontSize: "1rem",
         fontWeight: "500",
-        borderRadius: "15px",
         paddingInline: "1rem",
       }}
       hideProgressBar={false}
@@ -22,5 +21,5 @@ export default function CustomNotification() {
       draggable
       pauseOnHover
     />
-  )
+  );
 }
